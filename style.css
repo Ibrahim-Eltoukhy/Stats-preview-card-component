@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bg: #0a0c19;
+  --card-bg: #1b1938;
+  --overlay: #aa5cdb;
+  --main-p: hsla(0, 0%, 100%, 0.75);
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: var(--main-bg);
+}
+main {
+  min-height: 95vh;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Card style */
+section {
+  background-color: var(--card-bg);
+  color: #fff;
+  max-width: 100rem;
+  border-radius: 9px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.text {
+  padding: 6rem;
+}
+.text h1 {
+  line-height: 1.1;
+  font-weight: 700;
+  font-size: 3.2rem;
+  margin-bottom: 3rem;
+}
+.ins {
+  color: var(--overlay);
+}
+.main-p {
+  line-height: 1.6;
+  font-size: 1.5rem;
+  color: var(--main-p);
+  margin-bottom: 6.2rem;
+}
+
+.numbers {
+  text-transform: uppercase;
+  display: flex;
+  gap: 6rem;
+}
+
+.numbers .no p {
+  font-weight: 700;
+  font-size: 2rem;
+}
+.numbers .no span {
+  color: hsla(0, 0%, 100%, 0.6);
+  font-size: 1.3rem;
+}
+
+.image {
+  background-image: linear-gradient(
+      rgba(170, 92, 219, 0.6),
+      rgba(170, 92, 219, 0.6)
+    ),
+    url(images/image-header-desktop.jpg);
+  border-top-right-radius: 9px;
+  border-bottom-right-radius: 9px;
+}
+
+@media screen and (max-width: 480px) {
+  main {
+    padding-top: 1.5rem;
+    height: auto;
+  }
+  section {
+    text-align: center;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    max-width: 90vw;
+  }
+  .text {
+    grid-row: 2;
+    padding: 1.5rem 2.8rem;
+  }
+  .text h1 {
+    font-weight: 700;
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
+  }
+  .numbers {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .main-p {
+    margin-bottom: 2.4rem;
+  }
+  .image {
+    background-image: linear-gradient(
+        rgba(170, 92, 219, 0.6),
+        rgba(170, 92, 219, 0.6)
+      ),
+      url(images/image-header-mobile.jpg);
+    height: 36vh;
+    background-size: cover;
+    border-top-right-radius: 9px;
+    border-top-left-radius: 9px;
+    border-bottom-right-radius: 0;
+  }
+}
+
+/* Footer */
+footer {
+  height: 5vh;
+  padding: 1rem 2rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: "Lexend Deca", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
